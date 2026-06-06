@@ -6,7 +6,7 @@ This project is a hands-on IAM lab built in Microsoft Entra ID to simulate acces
 
 I used this project to practice how an IAM Analyst may review access requests, validate business justification, route approvals, verify access assignments, and document ticket closure.
 
-The goal was to build a realistic request workflow using fictional users, security groups, access packages, and ticket scenarios in a controlled lab environment.
+The goal was to build a realistic access request workflow using fictional users, security groups, access packages, and ticket scenarios in a controlled lab environment.
 
 ## Scenario
 
@@ -32,7 +32,18 @@ This lab demonstrates how access requests can be handled from intake to closure,
 
 The lab uses a Microsoft Entra ID tenant named Northstar Identity Lab.
 
-All users, groups, access packages, and tickets are fictional and created only for learning and portfolio documentation.
+All users, groups, access packages, and tickets are created only for learning and portfolio documentation.
+
+## Lab identities
+
+| User | Role in lab | Workflow use |
+|---|---|---|
+| Ava Finance | Finance requester | Requests Finance reports read-only access |
+| Mia HR | HR requester | Requests HR employee records access |
+| Leo IT | IT requester | Requests IT service desk tools access |
+| Riley Manager | Approver/resource owner | Reviews access requests |
+
+The lab identities are fictional users created for access request and approval testing.
 
 ## Planned ticket workflows
 
