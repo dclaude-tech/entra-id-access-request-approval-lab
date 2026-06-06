@@ -10,43 +10,55 @@
 | Backing security group | SG-Finance-Reports-Read |
 | Resource area          | Finance reports         |
 | Access level           | Read-only               |
-| Planned outcome        | Approved                |
-| Ticket status          | Open                    |
+| Outcome                | Approved                |
+| Ticket status          | Closed                  |
 
 ## Request details
 
-Ava Finance is requesting read-only access to fictional Finance reporting resources.
+Ava Finance requested read-only access to fictional Finance reporting resources.
 
 The requested access is tied to the AP-Finance-Reports-Read access package, which assigns membership to the SG-Finance-Reports-Read security group after approval.
 
 ## Business justification
 
-Ava Finance needs read-only access to Finance reporting resources to review department reporting data.
+Ava Finance requested read-only access to Finance reporting resources to review department reporting data.
 
 ## IAM review notes
 
-This request appears aligned with the requester’s fictional Finance role.
+The request aligned with the requester’s fictional Finance role.
 
-The requested access is limited to read-only Finance reporting access, which supports least privilege because it does not grant broad administrative access or unrelated department access.
+The requested access was limited to read-only Finance reporting access, which supports least privilege because it does not grant broad administrative access or unrelated department access.
 
-## Approval plan
+## Approval decision
 
-| Step    | Reviewer      | Planned action                                                                       |
-| ------- | ------------- | ------------------------------------------------------------------------------------ |
-| Stage 1 | Riley Manager | Review and approve if the request aligns with the requester’s role and business need |
+| Step    | Reviewer      | Decision | Notes                                                                          |
+| ------- | ------------- | -------- | ------------------------------------------------------------------------------ |
+| Stage 1 | Riley Manager | Approved | Request aligned with the requester’s fictional Finance role and business need. |
 
 ## Access assignment status
 
-Access has not been assigned yet.
+Access was assigned through the AP-Finance-Reports-Read access package after approval.
 
-## Verification plan
+The access package assignment was delivered to Ava Finance.
 
-After approval, verify that:
+## Verification
 
-* The access package assignment is delivered
-* Ava Finance is added to SG-Finance-Reports-Read
-* The ticket is updated with evidence and closure notes
+After approval, access was verified in two places:
+
+* AP-Finance-Reports-Read showed Ava Finance with a delivered assignment
+* SG-Finance-Reports-Read showed Ava Finance as a direct group member
 
 ## Evidence
 
-Evidence will be added after the request is submitted, approved, assigned, and verified.
+| Evidence                            | Screenshot                                                                       |
+| ----------------------------------- | -------------------------------------------------------------------------------- |
+| Request submitted                   | `screenshots/04-ticket-workflows/01-ticket-001-request-submitted.png`            |
+| Request approved                    | `screenshots/04-ticket-workflows/02-ticket-001-request-approved.png`             |
+| Access package assignment delivered | `screenshots/05-access-verification/03-ticket-001-assignment-delivered.png`      |
+| Security group membership verified  | `screenshots/05-access-verification/04-ticket-001-group-membership-verified.png` |
+
+## Closure notes
+
+TICKET-001 was approved, assigned, verified, and closed.
+
+Ava Finance received read-only Finance reports access through the documented access request and approval workflow.
