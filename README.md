@@ -36,12 +36,12 @@ All users, groups, access packages, and tickets are created only for learning an
 
 ## Lab identities
 
-| User | Role in lab | Workflow use |
-|---|---|---|
-| Ava Finance | Finance requester | Requests Finance reports read-only access |
-| Mia HR | HR requester | Requests HR employee records access |
-| Leo IT | IT requester | Requests IT service desk tools access |
-| Riley Manager | Approver/resource owner | Reviews access requests |
+| User          | Role in lab             | Workflow use                              |
+| ------------- | ----------------------- | ----------------------------------------- |
+| Ava Finance   | Finance requester       | Requests Finance reports read-only access |
+| Mia HR        | HR requester            | Requests HR employee records access       |
+| Leo IT        | IT requester            | Requests IT service desk tools access     |
+| Riley Manager | Approver/resource owner | Reviews access requests                   |
 
 The lab identities are fictional users created for access request and approval testing.
 
@@ -53,13 +53,15 @@ The lab identities are fictional users created for access request and approval t
 | TICKET-002 | HR employee records read-only access | Denied                |
 | TICKET-003 | IT service desk tools access         | Approved after review |
 
-## Planned access model
+## Access model
 
 | Resource area         | Access package              | Backing security group      |
 | --------------------- | --------------------------- | --------------------------- |
 | Finance reports       | AP-Finance-Reports-Read     | SG-Finance-Reports-Read     |
 | HR employee records   | AP-HR-Employee-Records-Read | SG-HR-Employee-Records-Read |
 | IT service desk tools | AP-IT-ServiceDesk-Tools     | SG-IT-ServiceDesk-Tools     |
+
+Each access package is connected to a dedicated Microsoft Entra security group. Access will be requested through entitlement management and assigned only after the configured workflow is completed.
 
 ## Skills practiced
 
@@ -78,6 +80,11 @@ The lab identities are fictional users created for access request and approval t
 
 ```text
 screenshots/
+  01-repo-setup/
+  02-entra-setup/
+  03-access-packages/
+  04-ticket-workflows/
+  05-access-verification/
 tickets/
 README.md
 ```
