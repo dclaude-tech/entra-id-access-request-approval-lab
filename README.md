@@ -63,6 +63,18 @@ The lab identities are fictional users created for access request and approval t
 
 Each access package is connected to a dedicated Microsoft Entra security group. Access will be requested through entitlement management and assigned only after the configured workflow is completed.
 
+## Request approval policies
+
+| Access package              | Eligible requester | Approval required | Approver      | Justification required |
+| --------------------------- | ------------------ | ----------------- | ------------- | ---------------------- |
+| AP-Finance-Reports-Read     | Ava Finance        | Yes               | Riley Manager | Yes                    |
+| AP-HR-Employee-Records-Read | Mia HR             | Yes               | Riley Manager | Yes                    |
+| AP-IT-ServiceDesk-Tools     | Leo IT             | Yes               | Riley Manager | Yes                    |
+
+Each access package uses a request approval policy to control who can request access and who must approve the request before access is assigned.
+
+The policies are intentionally scoped to one requester per access package so each ticket workflow can be tested and documented clearly.
+
 ## Skills practiced
 
 * IAM access request review
