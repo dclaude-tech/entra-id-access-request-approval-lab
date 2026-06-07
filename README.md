@@ -2,35 +2,30 @@
 
 ## Overview
 
-This project is a hands-on IAM lab built in Microsoft Entra ID to simulate access request and approval workflows.
+This project is a hands-on IAM access request and approval lab built in Microsoft Entra ID.
 
-I used this project to practice how an IAM Analyst may review access requests, validate business justification, route approvals, verify access assignments, and document ticket closure.
-
-The goal was to build a realistic access request workflow using fictional users, security groups, access packages, and ticket scenarios in a controlled lab environment.
+I used this lab to practice the access request process from intake to closure: reviewing the request, checking the business justification, routing it for approval, verifying the assignment, and documenting the ticket outcome.
 
 ## Scenario
 
 Northstar Identity Lab is a fictional organization with department-based access needs across Finance, HR, and IT.
 
-In this lab, users request access to specific resources through Microsoft Entra entitlement management. Each request is reviewed based on least privilege, business need, approval requirements, and verification evidence.
+In this lab, users request access to specific resources through Microsoft Entra entitlement management. Each request is reviewed based on business need, least privilege, approval requirements, and verification evidence.
 
-## What this lab demonstrates
+## Workflow demonstrated
 
-This lab demonstrates how access requests can be handled from intake to closure, including:
+This lab demonstrates an IAM access request workflow, including:
 
-* Creating access groups for department resources
-* Creating fictional lab users for request and approval scenarios
-* Creating Microsoft Entra access packages
+* Creating Microsoft Entra users, groups, and access packages
 * Configuring request and approval policies
 * Submitting access requests as fictional users
 * Approving or denying requests based on business context
-* Verifying access package assignments
-* Verifying backing security group membership
-* Documenting IAM ticket outcomes
+* Verifying access package assignments and group membership
+* Documenting ticket outcomes
 
 ## Lab environment
 
-The lab uses a Microsoft Entra ID tenant named Northstar Identity Lab.
+The lab uses a Microsoft Entra ID tenant named **Northstar Identity Lab**.
 
 All users, groups, access packages, and tickets were created only for learning and portfolio documentation.
 
@@ -45,7 +40,7 @@ All users, groups, access packages, and tickets were created only for learning a
 
 The lab identities are fictional users created for access request and approval testing.
 
-## Completed ticket workflows
+## Ticket workflows
 
 | Ticket     | Access request                       | Outcome               |
 | ---------- | ------------------------------------ | --------------------- |
@@ -53,13 +48,15 @@ The lab identities are fictional users created for access request and approval t
 | TICKET-002 | HR employee records read-only access | Denied                |
 | TICKET-003 | IT service desk tools access         | Approved after review |
 
+The denied HR request was included to show that IAM review is not only about granting access. Some requests should be rejected when the business justification does not support the level of access requested.
+
 ## Ticket documentation
 
-| Ticket | Documentation | Summary |
-|---|---|---|
-| TICKET-001 | [TICKET-001 finance reports read](tickets/TICKET-001-finance-reports-read.md) | Approved Finance reports access request |
-| TICKET-002 | [TICKET-002 HR employee records read](tickets/TICKET-002-hr-employee-records-read.md) | Denied HR employee records access request |
-| TICKET-003 | [TICKET-003 IT service desk tools](tickets/TICKET-003-it-servicedesk-tools.md) | Approved IT service desk tools access request |
+| Ticket     | Documentation                                                                         | Summary                                       |
+| ---------- | ------------------------------------------------------------------------------------- | --------------------------------------------- |
+| TICKET-001 | [TICKET-001 finance reports read](tickets/TICKET-001-finance-reports-read.md)         | Approved Finance reports access request       |
+| TICKET-002 | [TICKET-002 HR employee records read](tickets/TICKET-002-hr-employee-records-read.md) | Denied HR employee records access request     |
+| TICKET-003 | [TICKET-003 IT service desk tools](tickets/TICKET-003-it-servicedesk-tools.md)        | Approved IT service desk tools access request |
 
 Each ticket documents the requester, requested access, business justification, IAM review notes, approval decision, verification results, evidence, and closure notes.
 
@@ -71,7 +68,9 @@ Each ticket documents the requester, requested access, business justification, I
 | HR employee records   | AP-HR-Employee-Records-Read | SG-HR-Employee-Records-Read |
 | IT service desk tools | AP-IT-ServiceDesk-Tools     | SG-IT-ServiceDesk-Tools     |
 
-Each access package is connected to a dedicated Microsoft Entra security group. Access is requested through entitlement management and assigned only after the configured approval workflow is completed.
+Each access package is connected to a dedicated Microsoft Entra security group.
+
+Access is requested through entitlement management and assigned only after the configured approval workflow is completed.
 
 ## Request approval policies
 
@@ -83,20 +82,15 @@ Each access package is connected to a dedicated Microsoft Entra security group. 
 
 Each access package uses a request approval policy to control who can request access and who must approve the request before access is assigned.
 
-The policies are intentionally scoped to one requester per access package so each ticket workflow can be tested and documented clearly.
+## IAM analyst skills practiced
 
-## Skills practiced
-
-* IAM access request review
-* Approval workflow documentation
+* Access request review
+* Business justification review
 * Least-privilege decision making
+* Approval and denial documentation
 * Microsoft Entra entitlement management
-* Access package configuration
-* Security group-based access assignment
 * Access verification
-* Access denial documentation
-* IAM ticket documentation
-* Evidence collection
+* Ticket-style documentation
 
 ## Repository structure
 
@@ -113,29 +107,26 @@ README.md
 
 ## Evidence collected
 
-Screenshots were collected throughout the lab to document the setup, request workflows, approval decisions, access assignments, and verification results.
+Screenshots were collected throughout the lab to document setup, request workflows, approval decisions, access assignments, and verification results.
 
-Evidence includes:
+Evidence includes Microsoft Entra users, groups, access packages, approval policies, submitted requests, approval and denial decisions, assignment verification, and closed ticket documentation.
 
-* Repository setup
-* Microsoft Entra security groups
-* Fictional lab users
-* Access packages
-* Request and approval policies
-* Submitted access requests
-* Approval and denial decisions
-* Access package assignments
-* Security group membership verification
-* Closed ticket documentation
+## Project takeaways
+
+This lab helped reinforce that access approval depends on more than whether a user asks for access. The request needs to match the user’s role, the business justification needs to be clear, and the final access assignment needs to be verified.
+
+The most useful part of this lab was documenting different outcomes. One request was approved, one was denied, and one was approved after review. That made the workflow closer to real IAM support work.
 
 ## Project status
 
 Complete.
 
-This lab includes configured Microsoft Entra security groups, fictional lab users, access packages, request approval policies, and three documented IAM ticket workflows.
+This lab includes Microsoft Entra security groups, fictional lab users, access packages, request approval policies, three simulated IAM ticket workflows, and access verification evidence.
 
-The completed workflows demonstrate an approved Finance access request, a denied HR employee records request, and an approved IT service desk tools request with access assignment and group membership verification.
+## Scope notes
 
-## Important note
+This lab uses fictional users, access packages, security groups, and simulated tickets created for portfolio documentation.
 
-This is a fictional lab environment created for portfolio and learning purposes. It does not include confidential, employer, customer, or production information.
+The ticket files are written in Markdown to represent IAM ticket documentation. This lab does not use ServiceNow, Jira, production data, customer data, or real business applications.
+
+The access package policies were intentionally scoped to one requester per package so each workflow could be tested and documented clearly.
