@@ -2,51 +2,63 @@
 
 ## Ticket summary
 
-| Field                  | Details                     |
-| ---------------------- | --------------------------- |
-| Ticket ID              | TICKET-002                  |
-| Requester              | Mia HR                      |
-| Requested access       | AP-HR-Employee-Records-Read |
+| Field | Details |
+|---|---|
+| Ticket ID | TICKET-002 |
+| Requester | Mia HR |
+| Requested access | AP-HR-Employee-Records-Read |
 | Backing security group | SG-HR-Employee-Records-Read |
-| Resource area          | HR employee records         |
-| Access level           | Read-only                   |
-| Planned outcome        | Denied                      |
-| Ticket status          | Open                        |
+| Resource area | HR employee records |
+| Access level | Read-only |
+| Outcome | Denied |
+| Ticket status | Closed |
 
 ## Request details
 
-Mia HR is requesting read-only access to fictional HR employee records.
+Mia HR requested read-only access to fictional HR employee records.
 
-The requested access is tied to the AP-HR-Employee-Records-Read access package, which would assign membership to the SG-HR-Employee-Records-Read security group if approved.
+The requested access was tied to the AP-HR-Employee-Records-Read access package, which would assign membership to the SG-HR-Employee-Records-Read security group if approved.
 
 ## Business justification
 
-Mia HR is requesting access to review employee information for department reporting.
+Mia HR requested access to review employee information for department reporting.
 
 ## IAM review notes
 
-This request requires additional scrutiny because HR employee records may contain sensitive employee information.
+The request required additional review because HR employee records may contain sensitive employee information.
 
-Before access can be granted, the request should clearly explain the business need, scope, and reason the requester needs access to this specific HR resource.
+The request did not include enough detail about the specific records, scope, or business need required to approve access to sensitive HR data. Based on least privilege, the request was denied.
 
-## Approval plan
+## Approval decision
 
-| Step    | Reviewer      | Planned action                                                                                           |
-| ------- | ------------- | -------------------------------------------------------------------------------------------------------- |
-| Stage 1 | Riley Manager | Review the request and deny if the business justification is not specific enough for sensitive HR access |
+| Step | Reviewer | Decision | Notes |
+|---|---|---|---|
+| Stage 1 | Riley Manager | Denied | Request did not provide enough detail about the specific HR records, scope, or business need. |
 
 ## Access assignment status
 
-Access has not been assigned.
+Access was not assigned.
 
-## Verification plan
+Because the request was denied, Mia HR did not receive a delivered access package assignment.
 
-After the decision, verify that:
+## Verification
 
-* No delivered access package assignment exists if the request is denied
-* Mia HR is not added to SG-HR-Employee-Records-Read if the request is denied
-* The ticket is updated with evidence and closure notes
+After the denial, access was verified in two places:
+
+- AP-HR-Employee-Records-Read showed no delivered assignment for Mia HR
+- SG-HR-Employee-Records-Read showed no group membership for Mia HR
 
 ## Evidence
 
-Evidence will be added after the request is submitted, reviewed, denied, and verified.
+| Evidence | Screenshot |
+|---|---|
+| Request submitted | `screenshots/04-ticket-workflows/05-ticket-002-request-submitted.png` |
+| Request denied | `screenshots/04-ticket-workflows/06-ticket-002-request-denied.png` |
+| No access package assignment found | `screenshots/05-access-verification/07-ticket-002-no-assignment-found.png` |
+| No security group membership found | `screenshots/05-access-verification/08-ticket-002-group-membership-not-found.png` |
+
+## Closure notes
+
+TICKET-002 was reviewed, denied, verified, and closed.
+
+Mia HR did not receive HR employee records access because the request did not include enough detail to justify access to sensitive HR resources.
