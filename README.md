@@ -32,7 +32,7 @@ This lab demonstrates how access requests can be handled from intake to closure,
 
 The lab uses a Microsoft Entra ID tenant named Northstar Identity Lab.
 
-All users, groups, access packages, and tickets are created only for learning and portfolio documentation.
+All users, groups, access packages, and tickets were created only for learning and portfolio documentation.
 
 ## Lab identities
 
@@ -45,13 +45,23 @@ All users, groups, access packages, and tickets are created only for learning an
 
 The lab identities are fictional users created for access request and approval testing.
 
-## Planned ticket workflows
+## Completed ticket workflows
 
-| Ticket     | Access request                       | Planned outcome       |
+| Ticket     | Access request                       | Outcome               |
 | ---------- | ------------------------------------ | --------------------- |
 | TICKET-001 | Finance reports read-only access     | Approved              |
 | TICKET-002 | HR employee records read-only access | Denied                |
 | TICKET-003 | IT service desk tools access         | Approved after review |
+
+## Ticket documentation
+
+| Ticket | Documentation | Summary |
+|---|---|---|
+| TICKET-001 | [TICKET-001 finance reports read](tickets/TICKET-001-finance-reports-read.md) | Approved Finance reports access request |
+| TICKET-002 | [TICKET-002 HR employee records read](tickets/TICKET-002-hr-employee-records-read.md) | Denied HR employee records access request |
+| TICKET-003 | [TICKET-003 IT service desk tools](tickets/TICKET-003-it-servicedesk-tools.md) | Approved IT service desk tools access request |
+
+Each ticket documents the requester, requested access, business justification, IAM review notes, approval decision, verification results, evidence, and closure notes.
 
 ## Access model
 
@@ -61,7 +71,7 @@ The lab identities are fictional users created for access request and approval t
 | HR employee records   | AP-HR-Employee-Records-Read | SG-HR-Employee-Records-Read |
 | IT service desk tools | AP-IT-ServiceDesk-Tools     | SG-IT-ServiceDesk-Tools     |
 
-Each access package is connected to a dedicated Microsoft Entra security group. Access will be requested through entitlement management and assigned only after the configured workflow is completed.
+Each access package is connected to a dedicated Microsoft Entra security group. Access is requested through entitlement management and assigned only after the configured approval workflow is completed.
 
 ## Request approval policies
 
@@ -101,11 +111,11 @@ tickets/
 README.md
 ```
 
-## Evidence plan
+## Evidence collected
 
-Screenshots will be collected throughout the lab to document the setup and workflow results.
+Screenshots were collected throughout the lab to document the setup, request workflows, approval decisions, access assignments, and verification results.
 
-Planned evidence includes:
+Evidence includes:
 
 * Repository setup
 * Microsoft Entra security groups
@@ -120,7 +130,11 @@ Planned evidence includes:
 
 ## Project status
 
-In progress.
+Complete.
+
+This lab includes configured Microsoft Entra security groups, fictional lab users, access packages, request approval policies, and three documented IAM ticket workflows.
+
+The completed workflows demonstrate an approved Finance access request, a denied HR employee records request, and an approved IT service desk tools request with access assignment and group membership verification.
 
 ## Important note
 
