@@ -10,43 +10,55 @@
 | Backing security group | SG-IT-ServiceDesk-Tools |
 | Resource area          | IT service desk tools   |
 | Access level           | Standard user access    |
-| Planned outcome        | Approved after review   |
-| Ticket status          | Open                    |
+| Outcome                | Approved after review   |
+| Ticket status          | Closed                  |
 
 ## Request details
 
-Leo IT is requesting access to fictional IT service desk tools.
+Leo IT requested access to fictional IT service desk tools.
 
-The requested access is tied to the AP-IT-ServiceDesk-Tools access package, which assigns membership to the SG-IT-ServiceDesk-Tools security group after approval.
+The requested access was tied to the AP-IT-ServiceDesk-Tools access package, which assigns membership to the SG-IT-ServiceDesk-Tools security group after approval.
 
 ## Business justification
 
-Leo IT needs access to IT service desk tools to support troubleshooting, user support, and ticket resolution activities.
+Leo IT requested access to IT service desk tools to support troubleshooting, user support, and ticket resolution activities.
 
 ## IAM review notes
 
-This request appears aligned with the requester’s fictional IT support role.
+The request aligned with the requester’s fictional IT support role.
 
-Because IT service desk tools may provide operational access, the request should be reviewed before access is assigned. Approval should confirm that the access supports the requester’s role and does not grant unnecessary administrative privileges.
+Because IT service desk tools may provide operational access, the request was reviewed before access was assigned. The approval confirmed that the access supported the requester’s role and did not grant unnecessary administrative privileges.
 
-## Approval plan
+## Approval decision
 
-| Step    | Reviewer      | Planned action                                                                            |
-| ------- | ------------- | ----------------------------------------------------------------------------------------- |
-| Stage 1 | Riley Manager | Review and approve if the request aligns with the requester’s IT support responsibilities |
+| Step    | Reviewer      | Decision | Notes                                                                                         |
+| ------- | ------------- | -------- | --------------------------------------------------------------------------------------------- |
+| Stage 1 | Riley Manager | Approved | Request aligned with the requester’s fictional IT support responsibilities and business need. |
 
 ## Access assignment status
 
-Access has not been assigned yet.
+Access was assigned through the AP-IT-ServiceDesk-Tools access package after approval.
 
-## Verification plan
+The access package assignment was delivered to Leo IT.
 
-After approval, verify that:
+## Verification
 
-* The access package assignment is delivered
-* Leo IT is added to SG-IT-ServiceDesk-Tools
-* The ticket is updated with evidence and closure notes
+After approval, access was verified in two places:
+
+* AP-IT-ServiceDesk-Tools showed Leo IT with a delivered assignment
+* SG-IT-ServiceDesk-Tools showed Leo IT as a direct group member
 
 ## Evidence
 
-Evidence will be added after the request is submitted, approved, assigned, and verified.
+| Evidence                            | Screenshot                                                                       |
+| ----------------------------------- | -------------------------------------------------------------------------------- |
+| Request submitted                   | `screenshots/04-ticket-workflows/09-ticket-003-request-submitted.png`            |
+| Request approved                    | `screenshots/04-ticket-workflows/10-ticket-003-request-approved.png`             |
+| Access package assignment delivered | `screenshots/05-access-verification/11-ticket-003-assignment-delivered.png`      |
+| Security group membership verified  | `screenshots/05-access-verification/12-ticket-003-group-membership-verified.png` |
+
+## Closure notes
+
+TICKET-003 was approved, assigned, verified, and closed.
+
+Leo IT received IT service desk tools access through the documented access request and approval workflow.
